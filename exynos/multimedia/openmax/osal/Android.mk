@@ -3,6 +3,9 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_C_INCLUDES:= \
+      $(TOP)/frameworks/native/include/media/hardware
+
 LOCAL_SRC_FILES := \
 	SEC_OSAL_Android.cpp \
 	SEC_OSAL_Event.c \
