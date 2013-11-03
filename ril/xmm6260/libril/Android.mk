@@ -5,13 +5,8 @@ ifeq ($(BOARD_PROVIDES_LIBRIL),true)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-<<<<<<< HEAD
-#<JGOMEZ>
-LOCAL_C_INCLUDES := $(TARGET_SPECIFIC_HEADER_PATH)
-=======
 #<JGOMEZ> Need to include Samsung's ril.h
 LOCAL_C_INCLUDES += $(TARGET_SPECIFIC_HEADER_PATH)
->>>>>>> cm-10.2
 
 LOCAL_SRC_FILES:= \
     ril.cpp \
