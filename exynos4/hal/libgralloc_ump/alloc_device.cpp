@@ -308,9 +308,8 @@ static int gralloc_alloc_framebuffer_locked(alloc_device_t* dev, size_t size, in
         return gralloc_alloc_buffer(dev, bufferSize, newUsage, pHandle, w, h, format, bpp, 0, 0);
     }
 
-    /* <JGM> This is just a temporary *FIX* until I would figure out how to fix things on Gecko side */
-    /*if (bufferMask >= ((1LU<<numBuffers)-1))
-        return -ENOMEM;*/
+    if (bufferMask >= ((1LU<<numBuffers)-1))
+        return -ENOMEM;
 
     int vaddr = m->framebuffer->base;
     /* find a free slot */

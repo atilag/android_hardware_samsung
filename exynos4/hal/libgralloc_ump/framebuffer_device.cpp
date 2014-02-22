@@ -52,7 +52,10 @@
 #include "linux/fb.h"
 
 /* numbers of buffers for page flipping */
-#define NUM_BUFFERS 2
+/*#define NUM_BUFFERS 2*/
+/* <JGM> Increased to work with FirefoxOS */
+/* Kernel driver has been hacked too */
+#define NUM_BUFFERS 4
 
 enum {
     PAGE_FLIP = 0x00000001,
